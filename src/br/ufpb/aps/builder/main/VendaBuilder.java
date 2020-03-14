@@ -1,4 +1,4 @@
-package br.ufpb.aps.builder;
+package br.ufpb.aps.builder.main;
 
 public class VendaBuilder {
 	
@@ -10,7 +10,7 @@ public class VendaBuilder {
 	}
 	
 	public Venda build() {
-		return new Venda();
+		return this.venda;
 	}
 	
 	public VendaBuilder data(String data) {
@@ -23,7 +23,7 @@ public class VendaBuilder {
 		return this; 
 	}
 	
-	public VendaBuilder clientPJ(String razaoSocial, String cnpj) {
+	public VendaBuilder clientePJ(String razaoSocial, String cnpj) {
 		venda.setCliente(new ClientePJ(razaoSocial, cnpj));
 		return this;
 	}
@@ -33,15 +33,18 @@ public class VendaBuilder {
 		return this;
 	}
 	
-	public VendaBuilder item(int quantidade, Produto produto) {
-		venda.setItemVenda(new ItemVenda(quantidade, produto));
-		ItemVenda temp = venda.getItemVenda();
-		venda.item.add(temp);
+//	public VendaBuilder item(int quantidade, Produto produto) {
+//		venda.setItemVenda(new ItemVenda(quantidade, produto));
+//		ItemVenda temp = venda.getItemVenda();
+//		venda.item.add(temp);
+//		return this;
+//	}
+	public VendaBuilder item(ItemVenda itemVenda) {
+		venda.addItem(itemVenda);
 		return this;
 	}
-	
-	public VendaBuilder frete(double frete) {
-		venda.setFrete(new Frete(frete));
+	public VendaBuilder frete(Frete frete) {
+		venda.setFrete(frete);
 		return this;
 	}	
 

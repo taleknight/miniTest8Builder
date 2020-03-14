@@ -1,4 +1,4 @@
-package br.ufpb.aps.builder;
+package br.ufpb.aps.builder.main;
 
 public class ClientePJ extends Cliente{
 	private String razaoSocial;
@@ -21,6 +21,9 @@ public class ClientePJ extends Cliente{
 	public void setCpnj(String cpnj) {
 		this.cpnj = cpnj;
 	}
-		
+	
+	public String toString(){
+        return "razão social: " + this.razaoSocial + ", cnpj: " + this.cpnj;
+    }
 	
 }

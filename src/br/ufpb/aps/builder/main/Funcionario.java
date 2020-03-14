@@ -1,12 +1,13 @@
-package br.ufpb.aps.builder;
+package br.ufpb.aps.builder.main;
 
 public class Funcionario {
-	private String nome;
 	
+	private String nome;
+
 	public Funcionario(String nome) {
 		this.nome = nome;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
@@ -14,5 +15,8 @@ public class Funcionario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
+	public String toString() {
+		return this.nome;
+	}
 }
