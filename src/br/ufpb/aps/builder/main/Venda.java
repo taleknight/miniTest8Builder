@@ -72,13 +72,6 @@ public class Venda {
 	}
 
 	public String toString() {
-
-//		String itensa = "";
-//
-//		for (ItemVenda i : item) {
-//			itensa += i.toString();
-//		}
-//		return itensa;
 		return "data: " + data + ", cliente: " + cliente.toString() 
 				+ ", itemVenda: " + item.toString() + ", "
 				+ frete.toString() + ", Funcionario: "
